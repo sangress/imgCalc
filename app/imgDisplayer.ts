@@ -8,17 +8,20 @@ import {NgFor} from 'angular2/common';
 @Component({
   selector: 'img-displayer',
     template: `
-    <div class="media" *ngFor="#image of images">
-      <div class="media-left">
-        <a href="#">
-          <img class="media-object" src="{{ image.path }}" style="max-width:200px">
-        </a>
-      </div>
-      <div class="media-body">
-        <h4 class="media-heading">{{ image.name }}</h4>
-        <p>{{ image.size }} bytes</p>
+    <div class="flex-element">
+      <div class="media flex-item" *ngFor="#image of images">
+        <div class="media-left">
+          <a href="#">
+            <img class="media-object" src="{{ image.path }}" style="max-width:200px">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">{{ image.name }}</h4>
+          <p>{{ image.size }} bytes</p>
+        </div>
       </div>
     </div>
+
     `
 })
 
